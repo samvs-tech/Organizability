@@ -1,0 +1,25 @@
+* {
+box-sizing: border-box;
+}
+
+
+
+
+nav {
+    
+}
+
+.addTaskButton {
+    border: none;
+    color: white;
+    background-color: blue;
+    padding: 15px 32px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: left;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    margin: 4px;
+    cursor: pointer;
+}
