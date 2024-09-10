@@ -44,14 +44,3 @@ taskInfoSubmit.addEventListener('click', function (event) {
 
 
 
-//     const taskSubmission = {
-//         taskNameInput: taskNameInput.value,
-//         taskDescriptionInput: taskDescriptionInput.value,
-//         taskPriorityInput: taskPriority_input.value
-//     };
-//     // Convert the object to a string and store it
-//     localStorage.setItem('taskSubmission', JSON.stringify(taskSubmission));
-
-// });
-
-
