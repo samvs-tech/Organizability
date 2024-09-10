@@ -95,17 +95,19 @@
     border: 2px solid #333;
 }
     
-    .squareBox {
-        width: 180px;
-        height: 180px;
-        background-color: #3498db;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 16px;
-        border: 2px solid #fff;
-    }
+.squareBox {
+    width: 180px;
+    height: 180px;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 10px;
+}
 
     #tallDiv {
         width: 150px;
@@ -137,4 +139,5 @@
         cursor: pointer;
       
     }
+
 
