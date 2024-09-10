@@ -89,6 +89,7 @@ function buildTasks () {
 
 
 
+
 function sortTasks () {
     // set the current tasks array to the locally stored tasks
     currentTasks = JSON.parse(localStorage.getItem('TaskSubmissions'))
