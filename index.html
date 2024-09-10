@@ -53,7 +53,19 @@
                 </section>
                 <section id="notImportant_notUrgent">
                     <!--Child Div-->
-                    <div class="squareBox">Not Important nor Urgent</div>
+
+                    <div class="squareBox">
+                        <!-- Test task card -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Task Name</h5>
+                                <p class="card-text">Task Description</p>
+                                <button></button>
+                                <button type="button" class="btn-close text-reset" id="completeButton"></button>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
             </div>
         </div>
@@ -83,12 +95,12 @@
                 </textarea>
             </div>
             <select class="form-select" id="taskPriority_input" aria-labelledby="task-priority">
-                <option selected id="important_urgent_input">Important and Urgent</option>
-                <option value="Important but Not Urgent" id="important_nonurgent_input">Important but Not Urgent
+                <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
+                <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
                 </option>
-                <option value="Not Important but Urgent" class="dropdown-item" id="notImportant_urgent_input">Not
+                <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
                     Important but Urgent</option>
-                <option value="Not Important nor Urgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
+                <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
                     Important nor Urgent</option>
             </select>
             <!-- Space for a frequency option if we have time to work this in
