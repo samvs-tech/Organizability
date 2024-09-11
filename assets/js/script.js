@@ -42,47 +42,62 @@ taskInfoSubmit.addEventListener('click', function (event) {
 
 currentTasks = JSON.parse(localStorage.getItem('TaskSubmissions'));
 
-function buildTasks () {
+function buildTasks (currentTask) {
 
-    
-    if (!currentTasks) {
-        currentTasks = []
-    }
+    const taskName = currentTask.taskName;
+    const description = currentTask.description;
+    const priority = currentTask.priority;
 
-
-
-    const taskName = currentTasks.taskName;
-    const description = currentTasks.description;
-    const priority = currentTasks.priority;
-
-
-    //need to delete the div with class squareBox in HTML.index
-    const taskSquare = document.createElement('div');
+    // these variables create the element when used
     const divCreate1 = document.createElement('div');
     const divCreate2 = document.createElement('div');
     const headercreate = document.createElement('h5');
     const paragraphCreate = document.createElement('p');
     const buttonCreate1 = document.createElement('button');
     const buttonCreate2 = document.createElement('button');
+
+    // selects which section the task will be put in depending on the value of 
+    // its input priority.
     const PriorityCard = document.querySelector(`#${priority}`);
+  
 
-
-    
-    PriorityCard.appendChild(taskSquare);
-    taskSquare.setAttribute('class', 'squareBox');
-    taskSquare.appendChild(divCreate1);
+    // creates the first div element underneadth the squarebox
+    // based on the priority input for the task.
+    PriorityCard.children[0].appendChild(divCreate1);
+    // gives the created div the card class
     divCreate1.setAttribute('class', 'card');
+    
+    // creates another child div 
+     // gives the class 'card body'
     divCreate1.appendChild(divCreate2);
     divCreate2.setAttribute('class', 'card-body');
+
+    // creates the h5 header inside the card-body div 
+    // gives the header the class of card-title
     divCreate2.appendChild(headercreate);
+
     headercreate.setAttribute('class', 'card-title');
-    headercreate.appendChild(buttonCreate);
+
+    //creates a p tag under the card-body div
+    // with the class card-text.
     divCreate2.appendChild(paragraphCreate);
     paragraphCreate.setAttribute('class', 'card-text');
+
+    // creates a button underneath the card-body div,
+    // this button has the classes btn-close, and text-reset
+    // this will eventually be made into the mark complete button
+    // and will remove the task from the page
     divCreate2.appendChild(buttonCreate1);
     buttonCreate1.setAttribute('class', 'btn-close text-reset')
+
+    // this is another button created undernead the card-body div
+    // it only has the class of button, but the plan is to make it an edit
+    // button using a modal if there is time.
     divCreate2.appendChild(buttonCreate2);
     buttonCreate2.setAttribute('class', 'btn')
+
+    // this sets the header and the description to have the same text,
+    // as the input entered into the object.
     headercreate.textContent = taskName;
     paragraphCreate.textContent = description;
 }
@@ -91,22 +106,20 @@ function buildTasks () {
 
 
 function sortTasks () {
-    // set the current tasks array to the locally stored tasks
     currentTasks = JSON.parse(localStorage.getItem('TaskSubmissions'))
 
-
-
-    // currentTasks.priority.forEach(buildTasks);
-
-
-
-    // look into using a map for just the priority value to sort by priority.
+    // this for loop causes the buildtasks to iterate over each object in the
+    // currentTasks array. It will sort and build out each card for its 
+    // corresponding task.
     for (let i = 0; i < currentTasks.length; i++) {
         buildTasks(currentTasks[i]);
         }
-        
     }
 
+
+
+// when the page finishes loading, this calls the sortTasks fuction and builds
+// the cards for each task.
 window.addEventListener("load", sortTasks(currentTasks));
 
 
