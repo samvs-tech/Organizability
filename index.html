@@ -32,6 +32,16 @@
         <div class="infoAndTasksContainer">
             <div class="infoBox">
                 <div id="Date" class="infoItem">
+                    <script>
+                        function displayCurrentDate() {
+                            const currentDate = new Date().toDateString();
+                            document.getElementById('Date').innerHTML = currentDate;
+                        }
+                    
+                        window.onload = function() {
+                            displayCurrentDate();
+                        };
+                    </script>
                 </div>
                 <div id="taskSuggestion" class="infoItem">
                 </div>
@@ -114,6 +124,7 @@
 
 
     <script src="./assets/js/script.js"></script>
+    <!-- <script src="./assets/js/timeanddate.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
