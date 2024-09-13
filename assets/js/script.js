@@ -122,4 +122,4 @@ function sortTasks () {
 // the cards for each task.
 window.addEventListener("load", sortTasks(currentTasks));
 
-
+//////
