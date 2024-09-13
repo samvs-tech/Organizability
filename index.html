@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Organizability</title>
- 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
 
 
 </head>
@@ -18,108 +18,117 @@
 <body>
 
     <header>
-
+        
     </header>
 
-    <main class="mainContainer">
-        <div id="tallDiv">
-            <div id="buttonHolder">
-                <a href="#offcanvas" class="btn btn-secondary" data-bs-toggle="offcanvas" role="button"
-                    aria-controls="offcanvas">Add Tasks
-                </a>
-            </div>
-        </div>
-        <div class="infoAndTasksContainer">
-            <div class="infoBox">
-                <div id="Date" class="infoItem">
-                </div>
-                <div id="taskSuggestion" class="infoItem">
-                </div>
-            </div>
-            <!--Parent Div-->
-            <div class="taskCards">
+    <main class="container">
+        <div class="row mb-3">
+            <div class="infoAndTasksContainer">
+                <div class="infoBox mb-4">
+                    <a href="#offcanvas" class="btn btn-secondary" data-bs-toggle="offcanvas" role="button"
+                        aria-controls="offcanvas"><i class="bi bi-plus"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-plus" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                        </svg>
+                    </a>
 
-                <section id="important_urgent">
-                    <!--Child Div-->
-                    <div class="squareBox">Important and Urgent</div>
-                </section>
-                <section id="important_nonurgent">
-                    <!--Child Div-->
-                    <div class="squareBox">Important but Not Urgent</div>
-                </section>
-                <section id="notImportant_urgent">
-                    <!--Child Div-->
-                    <div class="squareBox">Not Important but Urgent</div>
-                </section>
-                <section id="notImportant_notUrgent">
-                    <!--Child Div-->
-
-                    <div class="squareBox">
-                        <!-- Test task card -->
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Task Name</h5>
-                                <p class="card-text">Task Description</p>
-                                <button></button>
-                                <button type="button" class="btn-close text-reset" id="completeButton"></button>
-                            </div>
-                        </div>
+                    <div id="Date" class="infoItem">
                     </div>
-
-                </section>
+                    <div id="taskSuggestion" class="infoItem">
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
 
-    <footer>
+</body>
 
-    </footer>
-
-
-    <!-- offcanvas -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas-label">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvas-label">
-                Add a Task!
-            </h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="mb-3">
-                <label for="taskNameInput" class="form-label">Task Name</label>
-                <input type="text" class="form-control" id="taskNameInput" placeholder="Run A Mile!">
+<!--Parent Div-->
+<div class="taskCards container">
+    <div class="row">
+        <section class="col-sm-12 col-lg-6 col-6" id="important_urgent">
+            <!--Child Div-->
+            <div class="squareBox d-flex justify-content-center">Important and Urgent</div>
+        </section>
+        <section class="col-sm-12 col-lg-6 col-6" id="important_nonurgent">
+            <!--Child Div-->
+            <div class="squareBox d-flex justify-content-center">Important but Not Urgent</div>
+        </section>
+    </div>
+    <div class="row mt-3">
+        <section class="col-sm-12 col-lg-6 col-6" id="notImportant_urgent">
+            <!--Child Div-->
+            <div class="squareBox d-flex justify-content-center">Not Important but Urgent</div>
+        </section>
+        <section class="col-sm-12 col-lg-6 col-6" id="notImportant_notUrgent">
+            <!--Child Div-->
+            <div class="squareBox d-flex justify-content-center">
+                <!-- Test task card-->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Task Name</h5>
+                        <p class="card-text">Task Description</p>
+                        <button></button>
+                        <button type="button" class="btn-close text-reset" id="completeButton"></button>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="taskDescriptionInput" class="form-label">Task Description</label>
-                <textarea class="form-control" id="taskDescriptionInput" rows="10">
+        </section>
+        
+    </div>
+</main>
+
+
+<footer>
+
+</footer>
+
+
+<!-- offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas-label">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvas-label">
+            Add a Task!
+        </h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="mb-3">
+            <label for="taskNameInput" class="form-label">Task Name</label>
+            <input type="text" class="form-control" id="taskNameInput" placeholder="Run A Mile!">
+        </div>
+        <div class="mb-3">
+            <label for="taskDescriptionInput" class="form-label">Task Description</label>
+            <textarea class="form-control" id="taskDescriptionInput" rows="10">
                 </textarea>
-            </div>
-            <select class="form-select" id="taskPriority_input" aria-labelledby="task-priority">
-                <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
-                <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
-                </option>
-                <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
-                    Important but Urgent</option>
-                <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
-                    Important nor Urgent</option>
-            </select>
-            <!-- Space for a frequency option if we have time to work this in
+        </div>
+        <select class="form-select" id="taskPriority_input" aria-labelledby="task-priority">
+            <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
+            <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
+            </option>
+            <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
+                Important but Urgent</option>
+            <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
+                Important nor Urgent</option>
+        </select>
+        <!-- Space for a frequency option if we have time to work this in
             <div>
             </div> -->
-            <div>
-                <button type="button" class="btn btn-secondary" id="taskInfoSubmit">Submit</button>
-            </div>
+        <div>
+            <button type="button" class="btn btn-secondary" id="taskInfoSubmit">Submit</button>
         </div>
     </div>
+</div>
 
 
-    <script src="./assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
 </body>
 

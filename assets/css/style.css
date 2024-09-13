@@ -5,7 +5,7 @@
     
     nav {
         
-    }
+    } 
     
     body {
     margin: 0;
@@ -16,12 +16,12 @@
         padding-top: 200px;
     }
 
-    #buttonHolder {
+    /*#buttonHolder {
         width: 100%;
         background-color: #1d1d1d;
         padding: 10px;
         text-align: center;
-    }
+    }*/
     
     /* Button inside the button holder */
     #buttonHolder a {
@@ -47,13 +47,12 @@
         cursor: pointer;
     }
 
-.infoBox {
-    width: 500px;
+.infoBox { 
     background-color: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px; 
     border: 2px solid #333;
     margin-bottom: 20px;
 }
@@ -66,16 +65,17 @@
     margin: 0 10px;
     text-align: center;
     border-radius: 5px;
+    min-height: 100px;
 
 }
 
-.mainContainer {
+/* .mainContainer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
     padding: 20px;
-}
+} */
 
 .infoAndTasksContainer {
     display: flex;
@@ -83,33 +83,36 @@
     gap: 20px;
 }
     
-.taskCards {
-    width: 500px;
+ .taskCards {
+   /* width: 500px;
     height: 500px;
     background-color: #f1f1f1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    padding: 30px;
+    align-items: center;*/
+    padding: 50px;
     border: 2px solid #333;
 }
     
 .squareBox {
-    width: 180px;
-    height: 180px;
     background-color: #3498db;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; 
     color: white;
     font-size: 13px;
     text-align: center;
     border: 2px solid #fff;
     padding: 10px;
+    border-radius: 5px;
+    min-height: 400px;
+}
+.squareBox .taskCards {
+    width: 100%;
 }
 
-    #tallDiv {
+    /* #tallDiv {
         width: 150px;
         height: 500px;
         background-color: #3498db;
@@ -121,7 +124,7 @@
         padding: 0;
         border: 2px solid #333;
         margin-top: 113.5px;
-    }
+    } */
     
       
       .addTaskButton {
