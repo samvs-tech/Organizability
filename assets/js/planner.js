@@ -51,3 +51,5 @@ document.getElementById('leftArrow').addEventListener('click', decrementDate);
 window.onload = function() {
     displayCurrentDate();
 };
+
+////////////
