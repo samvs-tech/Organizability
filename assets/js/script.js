@@ -184,4 +184,3 @@ function sortTasks() {
 window.addEventListener("load", sortTasks(currentTasks));
 
 
-
