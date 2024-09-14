@@ -6,15 +6,24 @@
     nav {
         
     } 
+
+    header, footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(138, 210, 199);
+        border: #333;
+    }
     
-    body {
-    margin: 0;
+   /* body {
+        margin: 0;
         height: 100vh;
         display: flex;
         justify-content: center; 
         align-items: flex-start; 
         padding-top: 200px;
-    }
+    }*/
+ 
 
     /*#buttonHolder {
         width: 100%;
@@ -160,3 +169,4 @@
         cursor: pointer;
       
     }
+
