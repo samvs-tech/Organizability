@@ -70,7 +70,7 @@ function buildTasks(currentTask) {
     // based on the priority input for the task.
     PriorityCard.children[0].appendChild(divCreate1);
     // gives the created div the card class
-    divCreate1.setAttribute('class', 'card');
+    divCreate1.setAttribute('class', 'card m-3');
     divCreate1.setAttribute('data-id', currentTask.id);
     // creates another child div 
     // gives the class 'card body'
