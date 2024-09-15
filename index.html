@@ -37,15 +37,15 @@
 
                     <div id="Date" class="infoItem">
                         <script>
-                        function displayCurrentDate() {
-                            const currentDate = new Date().toDateString();
-                            document.getElementById('Date').innerHTML = currentDate;
-                        }
-                    
-                        window.onload = function() {
-                            displayCurrentDate();
-                        };
-                    </script>
+                            function displayCurrentDate() {
+                                const currentDate = new Date().toDateString();
+                                document.getElementById('Date').innerHTML = currentDate;
+                            }
+
+                            window.onload = function () {
+                                displayCurrentDate();
+                            };
+                        </script>
                     </div>
                     <div id="taskSuggestion" class="infoItem">
                     </div>
@@ -56,85 +56,112 @@
 
 
 
-<!--Parent Div-->
-<div class="taskCards container">
-    <div class="row">
-        <section class="col-sm-12 col-lg-6 col-6" id="important_urgent">
-            <!--Child Div-->
-            <div class="squareBox d-flex justify-content-center">Important and Urgent</div>
-        </section>
-        <section class="col-sm-12 col-lg-6 col-6" id="important_nonurgent">
-            <!--Child Div-->
-            <div class="squareBox d-flex justify-content-center">Important but Not Urgent</div>
-        </section>
-    </div>
-    <div class="row mt-3">
-        <section class="col-sm-12 col-lg-6 col-6" id="notImportant_urgent">
-            <!--Child Div-->
-            <div class="squareBox d-flex justify-content-center">Not Important but Urgent</div>
-        </section>
-        <section class="col-sm-12 col-lg-6 col-6" id="notImportant_notUrgent">
-            <!--Child Div-->
-            <div class="squareBox d-flex justify-content-center">
-                <!-- Test task card-->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Task Name</h5>
-                        <p class="card-text">Task Description</p>
-                        <button></button>
-                        <button type="button" class="btn-close text-reset" id="completeButton"></button>
-                    </div>
-
-                </div>
+        <!--Parent Div-->
+        <div class="taskCards container">
+            <div class="row">
+                <section class="col-sm-12 col-lg-6 col-6" id="important_urgent">
+                    <!--Child Div-->
+                    <div class="squareBox d-flex justify-content-center row">Important and Urgent</div>
+                </section>
+                <section class="col-sm-12 col-lg-6 col-6" id="important_nonurgent">
+                    <!--Child Div-->
+                    <div class="squareBox d-flex justify-content-center">Important but Not Urgent</div>
+                </section>
             </div>
+            <div class="row mt-3">
+                <section class="col-sm-12 col-lg-6 col-6" id="notImportant_urgent">
+                    <!--Child Div-->
+                    <div class="squareBox d-flex justify-content-center">Not Important but Urgent</div>
+                </section>
+                <section class="col-sm-12 col-lg-6 col-6" id="notImportant_notUrgent">
+                    <!--Child Div-->
+                    <div class="squareBox d-flex justify-content-center">Not Important Nor Urgent</div>
+                </section>
 
-        </section>
-        
-    </div>
-</main>
+            </div>
+    </main>
 
-<footer>
-    <p>Go Back <i class="arrow left id" id="leftArrow"></i></p>
-    <p>Go Forward <i class="arrow right" id="rightArrow"></i></p>
-</footer>
+    <footer>
+        <p>Go Back <i class="arrow left id" id="leftArrow"></i></p>
+        <p>Go Forward <i class="arrow right" id="rightArrow"></i></p>
+    </footer>
 
-<!-- offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas-label">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvas-label">
-            Add a Task!
-        </h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div class="mb-3">
-            <label for="taskNameInput" class="form-label">Task Name</label>
-            <input type="text" class="form-control" id="taskNameInput" placeholder="Run A Mile!">
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvas-label">
+                Add a Task!
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="mb-3">
-            <label for="taskDescriptionInput" class="form-label">Task Description</label>
-            <textarea class="form-control" id="taskDescriptionInput" rows="10">
-                </textarea>
-        </div>
-        <select class="form-select" id="taskPriority_input" aria-labelledby="task-priority">
-            <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
-            <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
-            </option>
-            <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
-                Important but Urgent</option>
-            <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
-                Important nor Urgent</option>
-        </select>
-        <!-- Space for a frequency option if we have time to work this in
+        <div class="offcanvas-body">
+            <div class="mb-3">
+                <label for="taskNameInput" class="form-label">Task Name</label>
+                <input type="text" class="form-control" id="taskNameInput" placeholder="Run A Mile!">
+            </div>
+            <div class="mb-3">
+                <label for="taskDescriptionInput" class="form-label">Task Description</label>
+                <textarea class="form-control" id="taskDescriptionInput" rows="10"></textarea>
+            </div>
+            <select class="form-select" id="taskPriority_input" aria-labelledby="task-priority">
+                <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
+                <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
+                </option>
+                <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
+                    Important but Urgent</option>
+                <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
+                    Important nor Urgent</option>
+            </select>
+            <br>
+            <!-- Space for a frequency option if we have time to work this in
             <div>
             </div> -->
-        <div>
-            <button type="button" class="btn btn-secondary" id="taskInfoSubmit">Submit</button>
+            <div>
+                <button type="button" class="btn btn-secondary" id="taskInfoSubmit">Submit</button>
+            </div>
         </div>
     </div>
-</div>
 
 
+    <!-- modal -->
+    <div class="modal fade" id="modalTemplate" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Edit Task</h5>
+                    <button type="button" class='btn-close' data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p class="h5">Current Task Name:</p>
+                        <p id="currentTaskName"></p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="h5">Current Task Description:</p>
+                        <p id="currentTaskDescription"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="updatedTaskDescription" class="form-label">Updated Task Description:</label>
+                        <textarea class="form-control" id="updatedTaskDescription" rows="10"></textarea>
+                    </div>
+                    <select class="form-select" id="currentTaskPriority_input" aria-labelledby="task-priority">
+                        <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
+                        <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
+                        </option>
+                        <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
+                            Important but Urgent</option>
+                        <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
+                            Important nor Urgent</option>
+                    </select>
+                    <div class="visually-hidden" id="currentTaskID"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <button type="submit" class="btn btn-primary" id='modalSave' data-bs-dismiss="close" aria-label="Save">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
