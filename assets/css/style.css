@@ -14,27 +14,11 @@ footer {
     margin: 10px;
 }
 
-
-
 body {
     background-color: rgb(189, 185, 182);
     margin: 0;
-    /* height: 100vh;
-        display: flex;
-        justify-content: center; 
-        align-items: flex-start; 
-        padding-top: 200px;*/
+
 }
-
-
-/*#buttonHolder {
-        width: 100%;
-        background-color: #1d1d1d;
-        padding: 10px;
-        text-align: center;
-    }*/
-
-/* Button inside the button holder */
 
 .arrow {
     border: solid black;
@@ -52,17 +36,6 @@ body {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
-
-/*#buttonHolder a {
-    display: inline-block;
-    color: white;
-    background-color: #6c757d;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}*/
-
-
 
 .infoBox {
     background-color: #f1f1f1;
@@ -88,13 +61,7 @@ body {
 
 }
 
-/* .mainContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-} */
+
 
 .infoAndTasksContainer {
     display: flex;
@@ -103,24 +70,18 @@ body {
 }
 
 .taskCards {
-    /* width: 500px;
-    height: 500px;
-    background-color: #f1f1f1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;*/
+
     padding: 50px;
     border: 2px solid #333;
     border-radius: 20px;
     background-color: white;
-   
-    
+
+
 
 }
 
 .squareBox {
-    /*background-color: #83abc5;*/
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -161,43 +122,6 @@ h2 {
     border-radius: 10px;
     background-color: white;
     padding: 5px;
-   
-    
+
+
 }
-
-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px; /* Optional margin to separate title from the task */
-}
-
-/* #tallDiv {
-        width: 150px;
-        height: 500px;
-        background-color: #3498db;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0;
-        border: 2px solid #333;
-        margin-top: 113.5px;
-    } */
-
-
-/*.addTaskButton {
-    border: none;
-    color: white;
-    background-color: blue;
-    padding: 15px 32px;
-    border-radius: 50%;
-    text-align: center;
-    align-content: left;
-    text-decoration: none;
-    font-size: 20px;
-    display: flex;
-    margin: 4px;
-    cursor: pointer;
-
-}*/
