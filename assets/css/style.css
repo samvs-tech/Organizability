@@ -1,89 +1,48 @@
-
 * {
     box-sizing: border-box;
-    }
-    
-    nav {
-        
-    } 
+}
 
-    header, footer {
-        width: 100%;
-        display: block;
-        text-align: center;
-        border: #333;
-        padding: 70px;
-        margin: 10px;
-    }
 
-    
-    
-    body {
-        background-color: rgb(189, 185, 182);
-        margin: 0;
-       /* height: 100vh;
-        display: flex;
-        justify-content: center; 
-        align-items: flex-start; 
-        padding-top: 200px;*/
-    }
- 
 
-    /*#buttonHolder {
-        width: 100%;
-        background-color: #1d1d1d;
-        padding: 10px;
-        text-align: center;
-    }*/
-    
-    /* Button inside the button holder */
+header,
+footer {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: #333;
+    padding: 70px;
+    margin: 10px;
+}
 
-    .arrow {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-      }
+body {
+    background-color: rgb(189, 185, 182);
+    margin: 0;
 
-      .left {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-      }
+}
 
-      .right {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-      }
-      
-    #buttonHolder a {
-        display: inline-block;
-        color: white;
-        background-color: #6c757d;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
 
-    #addTaskButton {
-        background-color: white;
-        color: #3498db;
-        font-size: 24px;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
 
-.infoBox { 
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.infoBox {
     background-color: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px; 
+    padding: 20px;
     border: 2px solid #333;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -102,39 +61,30 @@
 
 }
 
-/* .mainContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-} */
+
 
 .infoAndTasksContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-    
- .taskCards {
-   /* width: 500px;
-    height: 500px;
-    background-color: #f1f1f1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;*/
+
+.taskCards {
+
     padding: 50px;
     border: 2px solid #333;
     border-radius: 20px;
     background-color: white;
+
+
+
 }
-    
+
 .squareBox {
-    /*background-color: #83abc5;*/
+
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start;
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
@@ -142,10 +92,14 @@
     padding: 10px;
     border-radius: 20px;
     min-height: 400px;
+
 }
+
 .squareBox .taskCards {
     width: 100%;
 }
+
+
 
 #important {
     background-color: rgb(246, 121, 117);
@@ -168,35 +122,6 @@ h2 {
     border-radius: 10px;
     background-color: white;
     padding: 5px;
-}
-    /* #tallDiv {
-        width: 150px;
-        height: 500px;
-        background-color: #3498db;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0;
-        border: 2px solid #333;
-        margin-top: 113.5px;
-    } */
-    
-      
-      .addTaskButton {
-        border: none;
-        color: white;
-        background-color: blue;
-        padding: 15px 32px;
-        border-radius: 50%;
-        text-align: center;
-        align-content: left;
-        text-decoration: none;
-        font-size: 20px;
-        display: flex;
-        margin: 4px;
-        cursor: pointer;
-      
-    }
 
+
+}
