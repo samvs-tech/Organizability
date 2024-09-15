@@ -56,11 +56,13 @@
 
 
 
+
         <!--Parent Div-->
         <div class="taskCards container">
             <div class="row">
                 <section class="col-sm-12 col-lg-6 col-6" id="important_urgent">
                     <!--Child Div-->
+
                     <div class="squareBox d-flex justify-content-center" id="important"><h2>Important and Urgent</h2></div>
                 </section>
                 <section class="col-sm-12 col-lg-6 col-6" id="important_nonurgent">
@@ -78,10 +80,17 @@
                     <div class="squareBox d-flex justify-content-center" id="not-urgent"><h2>Not Important and Not Urgent</h2></div>
                 </section>
             </div>
-
-            
-
+            <div class="row mt-3">
+                <section class="col-sm-12 col-lg-6 col-6" id="notImportant_urgent">
+                    <!--Child Div-->
+                    <div class="squareBox d-flex justify-content-center">Not Important but Urgent</div>
+                </section>
+                <section class="col-sm-12 col-lg-6 col-6" id="notImportant_notUrgent">
+                    <!--Child Div-->
+                    <div class="squareBox d-flex justify-content-center">Not Important Nor Urgent</div>
+                </section>
         </div>
+
     </main>
 
     <footer>
@@ -104,8 +113,9 @@
             </div>
             <div class="mb-3">
                 <label for="taskDescriptionInput" class="form-label">Task Description</label>
-                <textarea class="form-control" id="taskDescriptionInput" rows="10">
-                </textarea>
+
+                <textarea class="form-control" id="taskDescriptionInput" rows="10"></textarea>
+
             </div>
             <select class="form-select" id="taskPriority_input" aria-labelledby="task-priority">
                 <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
@@ -116,6 +126,9 @@
                 <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
                     Important nor Urgent</option>
             </select>
+
+            <br>
+
             <!-- Space for a frequency option if we have time to work this in
             <div>
             </div> -->
@@ -126,6 +139,45 @@
     </div>
 
 
+    <!-- modal -->
+    <div class="modal fade" id="modalTemplate" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Edit Task</h5>
+                    <button type="button" class='btn-close' data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p class="h5">Current Task Name:</p>
+                        <p id="currentTaskName"></p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="h5">Current Task Description:</p>
+                        <p id="currentTaskDescription"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="updatedTaskDescription" class="form-label">Updated Task Description:</label>
+                        <textarea class="form-control" id="updatedTaskDescription" rows="10"></textarea>
+                    </div>
+                    <select class="form-select" id="currentTaskPriority_input" aria-labelledby="task-priority">
+                        <option selected value="important_urgent" id="important_urgent_input">Important and Urgent</option>
+                        <option value="important_nonurgent" id="important_nonurgent_input">Important but Not Urgent
+                        </option>
+                        <option value="notImportant_urgent" class="dropdown-item" id="notImportant_urgent_input">Not
+                            Important but Urgent</option>
+                        <option value="notImportant_notUrgent" class="dropdown-item" id="notImportant_notUrgent_input">Not
+                            Important nor Urgent</option>
+                    </select>
+                    <div class="visually-hidden" id="currentTaskID"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                    <button type="submit" class="btn btn-primary" id='modalSave' data-bs-dismiss="close" aria-label="Save">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
