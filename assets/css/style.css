@@ -165,11 +165,7 @@ h2 {
     
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px; /* Optional margin to separate title from the task */
-}
+
 
 /* #tallDiv {
         width: 150px;
