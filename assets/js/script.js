@@ -289,4 +289,6 @@ console.log(headerCard);
 headerCard.textContent = randomTaskName;
 
 };
+
 window.onload();
+
