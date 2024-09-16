@@ -42,22 +42,26 @@
                         
                         <div class="arrows">
                             <span>Go Back</span> 
+
                             <!--leftArrow id for incrementDate function-->
                             <i class="arrow left" id="leftArrow"></i> 
                             <span>Go Forward</span> 
                             <!--rightArrow id for decrementDate function-->
+
                             <i class="arrow right" id="rightArrow"></i>
                         </div>
                     </div>
                     
                     <script>
                         function displayCurrentDate() {
+
                             /// JavaScript date function, converts Date into readable string
                             const currentDate = new Date().toDateString();
                             /// Retrieves date using getElementById of "Date"
                             document.getElementById('Date').innerHTML = currentDate;
                         }
                             /// function is executed and current date is displayed when page loads
+
                         window.onload = function () {
                             displayCurrentDate();
                         };
