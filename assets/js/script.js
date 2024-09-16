@@ -267,5 +267,26 @@ function sortTasks() {
 // the cards for each task.
 window.addEventListener("load", sortTasks(currentTasks));
 
+window.onload = function() {
+    const taskSuggestion = document.getElementById("taskSuggestion")
+    const randomTask_Index = Math.floor(Math.random() * currentTasks.length);
+    console.log(randomTask_Index);
+    const randomTaskName = currentTasks[randomTask_Index].taskName;
 
 
+taskSuggestion.innerHTML = `
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Need a Starting Place? Try This:</h5>
+            <p class="card-text h5" id="header-task"></p>
+        </div>
+    </div>
+`;
+const headerCard = document.getElementById("header-task");
+console.log(randomTask_Index);
+console.log(randomTaskName);
+console.log(headerCard);
+headerCard.textContent = randomTaskName;
+
+};
+window.onload();

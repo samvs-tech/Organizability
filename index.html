@@ -35,19 +35,35 @@
                         </svg>
                     </a>
 
-                    <div id="Date" class="infoItem">
-                        <script>
-                            function displayCurrentDate() {
-                                const currentDate = new Date().toDateString();
-                                document.getElementById('Date').innerHTML = currentDate;
-                            }
-
-                            window.onload = function () {
-                                displayCurrentDate();
-                            };
-                        </script>
+                    <div id="DateContainer" class="infoItem">
+                   
+                        <p id="Date"></p>
+                    
+                        
+                        <div class="arrows">
+                            <span>Go Back</span> 
+                            <!--leftArrow id for incrementDate function-->
+                            <i class="arrow left" id="leftArrow"></i> 
+                            <span>Go Forward</span> 
+                            <!--rightArrow id for decrementDate function-->
+                            <i class="arrow right" id="rightArrow"></i>
+                        </div>
                     </div>
+                    
+                    <script>
+                        function displayCurrentDate() {
+                            /// JavaScript date function, converts Date into readable string
+                            const currentDate = new Date().toDateString();
+                            /// Retrieves date using getElementById of "Date"
+                            document.getElementById('Date').innerHTML = currentDate;
+                        }
+                            /// function is executed and current date is displayed when page loads
+                        window.onload = function () {
+                            displayCurrentDate();
+                        };
+                    </script>
                     <div id="taskSuggestion" class="infoItem">
+                        
                     </div>
                 </div>
             </div>
@@ -97,8 +113,7 @@
     </main>
 
     <footer>
-        <p>Go Back <i class="arrow left id" id="leftArrow"></i></p>
-        <p>Go Forward <i class="arrow right" id="rightArrow"></i></p>
+      <p> &copy; 2024 The Organizability Team</p>
     </footer>
 
     <!-- offcanvas -->
