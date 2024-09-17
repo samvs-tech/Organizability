@@ -159,7 +159,6 @@ function markComplete(event) {
         // currentTasks.id is a number and taskID is a string
         // converted currentTasks.id into a string so they are comparable.
         // it is keeping every object and I don't know why
-        console.log(updatedTasks);
 
         //update the storage with our new array.
         localStorage.setItem('TaskSubmissions', JSON.stringify(updatedTasks));
@@ -194,7 +193,6 @@ function editTask(event) {
 
                 const taskName = currentTasks[i].taskName;
                 const description = currentTasks[i].description;
-                const priority = currentTasks[i].priority;
 
                 const currentTaskName = document.getElementById('currentTaskName');
                 const currentTaskDescription = document.getElementById('currentTaskDescription');
@@ -203,10 +201,6 @@ function editTask(event) {
                 currentTaskName.textContent = taskName;
                 currentTaskDescription.textContent = description;
                 currentTaskID.textContent = taskID;
-
-                console.log(currentTaskName);
-                console.log(currentTaskDescription);
-
             }
         }
     }
@@ -224,9 +218,6 @@ function saveTask(event) {
     const currentTaskName = document.getElementById('currentTaskName').textContent;
     const currentTaskPriorityInput = document.getElementById('currentTaskPriority_input').value;
     const updatedTaskDescription = document.getElementById('updatedTaskDescription').value;
-
-    console.log(currentTaskID);
-    console.log(currentTaskName);
 
     const editedTask = new TaskEntry(currentTaskName, updatedTaskDescription, currentTaskPriorityInput, parseInt(currentTaskID));
 
@@ -270,7 +261,6 @@ window.addEventListener("load", sortTasks(currentTasks));
 window.onload = function() {
     const taskSuggestion = document.getElementById("taskSuggestion")
     const randomTask_Index = Math.floor(Math.random() * currentTasks.length);
-    console.log(randomTask_Index);
     const randomTaskName = currentTasks[randomTask_Index].taskName;
 
 
@@ -283,9 +273,6 @@ taskSuggestion.innerHTML = `
     </div>
 `;
 const headerCard = document.getElementById("header-task");
-console.log(randomTask_Index);
-console.log(randomTaskName);
-console.log(headerCard);
 headerCard.textContent = randomTaskName;
 
 };
