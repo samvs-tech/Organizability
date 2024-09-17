@@ -6,7 +6,7 @@
 
 This website was created for the first group project of the ed-X Coding Bootcamp. It operates as a productivity/organizational tool. Tasks can be assigned and divided into four categories: Important and Urgent, Important but Not Urgent, Not Urgent but Important, and Not Important and Not Urgent. We decided early on we wanted to make an organizational tool with an emphasis on task management and note-taking. Having a single page where different tasks could be easily sorted was more important to us than designing something with robust calendar or planner functionality, although that is something we might pursue should we decide to keep working on this project. 
 
-LIVE LINK: `TBD`
+LIVE LINK: https://samvs-tech.github.io/Organizability/
 
 ## Technologies Used
 
@@ -87,6 +87,8 @@ Partially completed/tentative ongoing.
 This group consisted of Blake Torrey, Kristin Shields, Michael Kelly, and Morgan Troper. ChatGPT was utilized/consulted/etc. (at least by Morgan).
 
 Blake Torrey: https://github.com/BlakeTorrey
-Kristin Sheilds: https://github.com/Kristenshields
+Kristin Shields: https://github.com/Kristenshields
 Michael Kelly: https://github.com/samvs-tech
 Morgan Troper: https://github.com/morganjtroper2
+
+///
